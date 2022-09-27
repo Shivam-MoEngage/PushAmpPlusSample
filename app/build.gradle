@@ -17,15 +17,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-//    repositories {
-//        flatDir {
-//            dirs 'libs'
-//        }
-//    }
-
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
+    repositories {
+        flatDir {
+            dirs 'libs'
         }
     }
 
@@ -45,7 +39,7 @@ android {
 }
 
 dependencies {
-    implementation (files("libs/MiPush_SDK_Client_5_1_1-G_3rd.aar"))  //MiPush_SDK_Client_5_1_1-G_3rd.aar
+    implementation fileTree(dir: 'libs', include: ['*.jar', "*.aar"])
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'

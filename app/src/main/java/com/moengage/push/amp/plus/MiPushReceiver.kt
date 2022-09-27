@@ -15,6 +15,9 @@ package  com.moengage.push.amp.plus
 
 import android.content.Context
 import com.moengage.core.internal.logger.Logger
+import com.xiaomi.mipush.sdk.MiPushCommandMessage
+import com.xiaomi.mipush.sdk.MiPushMessage
+import com.xiaomi.mipush.sdk.PushMessageReceiver
 
 
 /**
